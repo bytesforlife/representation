@@ -34,8 +34,10 @@ class Api:
 
     def call(self, representation_uuid, *args, **kwargs):
         response, _ = self.interface.patch('representation', representation_uuid, body={'args': args, 'kwargs': kwargs})
-        endpoint = Representation(self, response['uuid'])
-        return endpoint
+        if response['type'] == 'uuid':
+            endpoint = Representation(self, response['uuid'])
+            return endpoint
+        return None
 
     def download(self, representation):
         response, _ = self.interface.get('representation', representation['representation_uuid'])
