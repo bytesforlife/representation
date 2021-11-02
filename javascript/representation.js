@@ -17,7 +17,6 @@ class HttpInterface {
             }
         }
 
-        console.log('Sending request: ' + verb + ' ' + url + ' ' + JSON.stringify(body));
         if(verb === "GET" || verb === "DELETE") {
             return fetch(url, {method: verb})
                 .then(response => { return response.json(); })
