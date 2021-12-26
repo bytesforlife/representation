@@ -36,12 +36,6 @@ print(api.download(area))
 ```
 
 
-# resources
-
-* developer documentation: [fdrtd.github.io/fdrtd](https://fdrtd.github.io/fdrtd)
-* support by email: [support@bytesforlife.com](mailto:support@bytesforlife.com)
-
-
 # how to report bugs
 
 please [open an issue](https://github.com/bytesforlife/representation/issues/new)
